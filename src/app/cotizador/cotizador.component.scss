@@ -1,0 +1,91 @@
+@import '../../styles';  // Importa las variables globales
+
+/* Estilos para el título */
+h2 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* Estilos generales para el formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilos para los labels */
+label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* Estilos para los inputs */
+input {
+  width: 200px;  // Ajustar el tamaño del input
+  margin-bottom: 12px;  // Separación entre inputs
+  padding: 8px;  // Espaciado dentro del input
+  font-size: 1rem;  // Tamaño de la fuente del input
+}
+
+/* Estilos para los botones */
+button {
+  margin-top: 20px;  // Separación superior del botón
+  padding: 10px 20px;  // Espaciado dentro del botón
+  background-color: $primary-color;  // Color de fondo usando la variable global
+  color: white;  // Texto blanco
+  border-radius: 8px;  // Bordes redondeados para el botón
+  border: none;  // Sin borde
+  cursor: pointer;  // Cambiar el cursor al pasar por encima
+
+  /* Hover effect */
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+/* Estilos para el mensaje de error */
+.error-message {
+  background-color: #f44336;  // Fondo rojo
+  color: white;  // Texto blanco
+  padding: 10px 20px;  // Reducir el padding para hacerlo más compacto
+  border-radius: 8px;  // Bordes redondeados
+  text-align: center;  // Centrar el texto
+  font-weight: bold;
+  margin: 0 auto 20px;  // Centrar el mensaje horizontalmente
+  width: 80%;  // Ajustar el ancho al 80% de la página para que no ocupe todo el ancho
+  max-width: 400px;  // Limitar el ancho máximo del mensaje
+
+  /* Animación para que el mensaje aparezca de forma suave */
+  animation: slideIn 0.5s ease-out;
+
+  /* Sombra para darle un toque visual */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Animación para el mensaje de error (deslizar desde arriba) */
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Estilo para el botón "Volver al Formulario" */
+button.volver {
+  background-color: #28a745;  // Verde para el botón de volver
+  margin-top: 10px;  // Separación entre el mensaje y el botón
+  padding: 10px 20px;  // Espaciado dentro del botón
+  border-radius: 8px;  // Bordes redondeados
+  border: none;  // Sin borde
+  cursor: pointer;  // Cambiar el cursor al pasar por encima
+
+  &:hover {
+    background-color: darken(#28a745, 10%);  // Hover verde más oscuro
+  }
+}

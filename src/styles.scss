@@ -1,1 +1,104 @@
-/* You can add global styles to this file, and also import other style files */
+// =============================================
+// 1. VARIABLES GLOBALS
+// =============================================
+
+$primary-color: #007bff;      // Color primario (azul brillante)
+$secondary-color: #6c757d;    // Gris oscuro
+$background-color: #f8f9fa;   // Fondo gris claro
+$text-color: #333;            // Color de texto principal
+$font-family: 'Arial', sans-serif;
+$border-radius: 8px;          // Radio para bordes redondeados
+$max-width: 1200px;           // Ancho máximo de contenedor
+$padding: 16px;               // Espaciado estándar
+
+
+// =============================================
+// 2. RESET CSS (opcional)
+// =============================================
+
+/* Asegura que no haya márgenes ni rellenos inesperados y usa box-sizing para una mejor gestión de tamaños. */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+// =============================================
+// 3. ESTILOS GENERALES
+// =============================================
+
+/* Body: define la fuente global y el color de fondo */
+body {
+  font-family: $font-family;
+  background-color: $background-color;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Contenedor centralizado para el contenido */
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 $padding;
+}
+
+
+// =============================================
+// 4. ESTILOS PARA ELEMENTOS COMUNES
+// =============================================
+
+/* Estilo global para botones */
+button {
+  background-color: $primary-color;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: $border-radius;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+/* Estilo global para inputs y textarea */
+input, textarea {
+  display: block;                // Asegura que ocupen toda la línea
+  width: 100%;                    // Asegura que ocupen todo el ancho posible
+  padding: 15px 20px;             // Más espacio en los inputs
+  font-size: 1rem;                // Tamaño de fuente adecuado
+  border: 1px solid #ccc;        // Borde suave y gris
+  border-radius: $border-radius; // Bordes redondeados
+  background-color: #fff;        // Fondo blanco para inputs y textareas
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Sombra suave para dar profundidad
+  margin-bottom: 20px;            // Espacio debajo de cada input/textarea
+
+  &:focus {
+    outline: none;               // Elimina el borde azul de foco predeterminado
+    border-color: $primary-color; // Borde de color primario en foco
+    box-shadow: 0 0 8px rgba($primary-color, 0.2); // Sombra suave en foco
+  }
+
+  /* Estilo específico para textareas */
+  textarea {
+    resize: vertical;            // Permite que los textareas se redimensionen verticalmente
+    min-height: 120px;            // Mínimo tamaño de altura
+  }
+}
+
+/* Centrar el contenedor de los inputs y textareas */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;              // Limita el ancho máximo del formulario
+  margin: 0 auto;                // Centra el formulario
+  padding: 20px;                 // Espaciado alrededor del formulario
+}
