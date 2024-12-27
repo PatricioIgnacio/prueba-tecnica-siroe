@@ -1,10 +1,10 @@
-<h1>Cotizador de Precios por Volumen</h1>
+# Cotizador de Precios por Volumen
 
-🚀 Descripción del Proyecto
+## 🚀 Descripción del Proyecto
 
 El Cotizador de Precios por Volumen es una aplicación web desarrollada en Angular 14 que permite calcular el precio basado en el volumen de un objeto según sus dimensiones ingresadas (largo, ancho y alto). Además, el sistema genera un registro del pedido, incluyendo su identificador, volumen calculado, precio, y la fecha y hora de creación.
 
-🔄 Características Clave
+## 🔄 Características Clave
 
 Cálculo de Volumen: Permite ingresar dimensiones para calcular automáticamente el volumen en cm³.
 
@@ -16,7 +16,7 @@ Registro de Pedidos: Genera un ID único para cada pedido, incluyendo la fecha y
 
 Interfaz Intuitiva: Diseño centrado en el usuario para facilitar la navegación y operación.
 
-🔄 Flujo de Trabajo
+## 🔄 Flujo de Trabajo
 
 Ingrese las dimensiones del objeto (largo, ancho y alto).
 
@@ -36,7 +36,7 @@ Fecha y Hora de Creación
 
 Reinicie el formulario para realizar otro pedido.
 
-🔧 Requisitos Técnicos
+## 🔧 Requisitos Técnicos
 
 Angular CLI: Version 14.0.0 o superior
 
@@ -44,7 +44,7 @@ Node.js: Version 14 o superior
 
 NPM: Version 6 o superior
 
-🔄 Configuración del Proyecto
+## 🔄 Configuración del Proyecto
 
 Clone el repositorio en su equipo local:
 
@@ -60,7 +60,7 @@ ng serve
 
 Navegue a http://localhost:4200/ para ver la aplicación en acción.
 
-🌐 Estructura del Proyecto
+## 🌐 Estructura del Proyecto
 
 Componentes:
 
@@ -70,7 +70,7 @@ ResultadoComponent: Visualización de los detalles del pedido generado.
 
 Estilos: Diseñados en SCSS para garantizar una apariencia moderna y responsiva.
 
-⚖️ Validación
+## ⚖️ Validación
 
 Control de Errores:
 
@@ -84,17 +84,7 @@ ng test
 
 Para ejecutar pruebas unitarias con Karma.
 
-🎨 Capturas de Pantalla
-
-Formulario Principal
-
-
-
-Resultado del Pedido
-
-
-
-🎮 Próximas Mejoras
+## 🎮 Próximas Mejoras
 
 Integración con servicios en la nube para almacenar registros de pedidos.
 
@@ -102,12 +92,10 @@ Implementación de autenticación de usuarios.
 
 Soporte para configuración de tarifas personalizadas.
 
-🚜 Credenciales del Equipo
+## 🚜 Credenciales del Equipo
 
-Desarrollador: [Tu Nombre]
+Desarrollador: Patricio Ignacio Santibáñez Gonzalez
 
-Contacto: [tuemail@empresa.com]
-
-Supervisión: Jefatura de Desarrollo Web
+Contacto: [patricioignacio.santibanez@gmail.com]
 
 🙏 Gracias por confiar en nuestras soluciones tecnológicas.
