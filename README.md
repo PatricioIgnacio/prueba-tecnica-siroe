@@ -1,27 +1,113 @@
-# Cotizador
+Cotizador de Precios por Volumen
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
+🚀 Descripción del Proyecto
 
-## Development server
+El Cotizador de Precios por Volumen es una aplicación web desarrollada en Angular 14 que permite calcular el precio basado en el volumen de un objeto según sus dimensiones ingresadas (largo, ancho y alto). Además, el sistema genera un registro del pedido, incluyendo su identificador, volumen calculado, precio, y la fecha y hora de creación.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+🔄 Características Clave
 
-## Code scaffolding
+Cálculo de Volumen: Permite ingresar dimensiones para calcular automáticamente el volumen en cm³.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Límite de Volumen: Restricción automática si el volumen excede los 2m³, mostrando un mensaje de error.
 
-## Build
+Cálculo de Precio: Estimación del precio basada en la fórmula definida.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Registro de Pedidos: Genera un ID único para cada pedido, incluyendo la fecha y hora de creación.
 
-## Running unit tests
+Interfaz Intuitiva: Diseño centrado en el usuario para facilitar la navegación y operación.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+🔄 Flujo de Trabajo
 
-## Running end-to-end tests
+Ingrese las dimensiones del objeto (largo, ancho y alto).
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Haga clic en "Calcular" para obtener el volumen y precio estimado.
 
-## Further help
+Si el volumen es válido, confirme el pedido.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Visualice los detalles del pedido generado, incluyendo:
+
+Número de Pedido
+
+Volumen
+
+Precio
+
+Fecha y Hora de Creación
+
+Reinicie el formulario para realizar otro pedido.
+
+🔧 Requisitos Técnicos
+
+Angular CLI: Version 14.0.0 o superior
+
+Node.js: Version 14 o superior
+
+NPM: Version 6 o superior
+
+🔄 Configuración del Proyecto
+
+Clone el repositorio en su equipo local:
+
+git clone <repositorio-url>
+
+Instale las dependencias del proyecto:
+
+npm install
+
+Ejecute el servidor de desarrollo:
+
+ng serve
+
+Navegue a http://localhost:4200/ para ver la aplicación en acción.
+
+🌐 Estructura del Proyecto
+
+Componentes:
+
+CotizadorComponent: Lógica principal para calcular volumen, manejar pedidos y errores.
+
+ResultadoComponent: Visualización de los detalles del pedido generado.
+
+Estilos: Diseñados en SCSS para garantizar una apariencia moderna y responsiva.
+
+⚖️ Validación
+
+Control de Errores:
+
+Mensaje cuando el volumen excede el límite permitido.
+
+Reinicio del formulario después de crear un pedido.
+
+Pruebas Unitarias:
+
+ng test
+
+Para ejecutar pruebas unitarias con Karma.
+
+🎨 Capturas de Pantalla
+
+Formulario Principal
+
+
+
+Resultado del Pedido
+
+
+
+🎮 Próximas Mejoras
+
+Integración con servicios en la nube para almacenar registros de pedidos.
+
+Implementación de autenticación de usuarios.
+
+Soporte para configuración de tarifas personalizadas.
+
+🚜 Credenciales del Equipo
+
+Desarrollador: [Tu Nombre]
+
+Contacto: [tuemail@empresa.com]
+
+Supervisión: Jefatura de Desarrollo Web
+
+🙏 Gracias por confiar en nuestras soluciones tecnológicas.
