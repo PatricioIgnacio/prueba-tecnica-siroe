@@ -32,17 +32,17 @@ export class CotizadorComponent {
 
   // Método para procesar el pedido
   procesarPedido() {
-    const pedidoId = Math.floor(Math.random() * 1000000);
-    const fecha = new Date();
+    const fecha = new Date(); // Crear un objeto Date con la fecha actual
+    const pedidoId = Math.floor(Math.random() * 1000000); // Generar un ID aleatorio
+  
     this.pedido = {
       id: pedidoId,
       volumen: this.volumen,
       precio: this.precio,
-      fecha: `${fecha.getDate()}/${fecha.getMonth() + 1}/${fecha.getFullYear()}`,
-      hora: `${fecha.getHours()}:${fecha.getMinutes()}:${fecha.getSeconds()}`
+      fecha: fecha // Almacenar la fecha completa como objeto Date
     };
-    this.pedidoCreado = true;
-  }
+    this.pedidoCreado = true; // Activar el estado de "pedido creado"
+  }  
 
   // Método para reiniciar el formulario
   reiniciarFormulario() {

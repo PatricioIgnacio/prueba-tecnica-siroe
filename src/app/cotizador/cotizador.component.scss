@@ -1,10 +1,18 @@
-@import '../../styles';  // Importa las variables globales
+@import '../../styles'; // Importa las variables globales
 
-/* Estilos para el título */
+/* Estilos para el título principal */
 h2 {
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin: 50px 0;
+}
+
+/* Estilos para el título de éxito */
+.titulo-exito {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #388e3c; // Verde oscuro
+  margin-bottom: 20px;
 }
 
 /* Estilos generales para el formulario */
@@ -23,48 +31,116 @@ label {
 
 /* Estilos para los inputs */
 input {
-  width: 200px;  // Ajustar el tamaño del input
-  margin-bottom: 12px;  // Separación entre inputs
-  padding: 8px;  // Espaciado dentro del input
-  font-size: 1rem;  // Tamaño de la fuente del input
+  width: 200px;
+  margin-bottom: 12px;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 /* Estilos para los botones */
 button {
-  margin-top: 20px;  // Separación superior del botón
-  padding: 10px 20px;  // Espaciado dentro del botón
-  background-color: $primary-color;  // Color de fondo usando la variable global
-  color: white;  // Texto blanco
-  border-radius: 8px;  // Bordes redondeados para el botón
-  border: none;  // Sin borde
-  cursor: pointer;  // Cambiar el cursor al pasar por encima
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: $primary-color;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
 
-  /* Hover effect */
   &:hover {
     background-color: darken($primary-color, 10%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   }
 }
 
-/* Estilos para el mensaje de error */
+/* Contenedor para los resultados */
+.resultado-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+
+  p {
+    margin: 5px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  button {
+    margin-top: 15px;
+  }
+}
+
+/* Contenedor para la ficha de pedido */
+.pedido-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+
+  .ficha-pedido {
+    background-color: #e8f5e9; // Verde claro
+    color: #388e3c; // Verde oscuro
+    padding: 20px 30px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+
+    p {
+      margin: 8px 0; // Separación entre líneas
+    }
+  }
+
+  button {
+    margin-bottom: 50px;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #388e3c; // Verde oscuro
+    color: white;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken(#388e3c, 10%);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+/* Contenedor para el mensaje de error */
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Estilo para el mensaje de error */
 .error-message {
-  background-color: #f44336;  // Fondo rojo
-  color: white;  // Texto blanco
-  padding: 10px 20px;  // Reducir el padding para hacerlo más compacto
-  border-radius: 8px;  // Bordes redondeados
-  text-align: center;  // Centrar el texto
+  background-color: #f44336;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-align: center;
   font-weight: bold;
-  margin: 0 auto 20px;  // Centrar el mensaje horizontalmente
-  width: 80%;  // Ajustar el ancho al 80% de la página para que no ocupe todo el ancho
-  max-width: 400px;  // Limitar el ancho máximo del mensaje
-
-  /* Animación para que el mensaje aparezca de forma suave */
+  margin: 0 auto 20px;
+  width: 80%;
+  max-width: 400px;
   animation: slideIn 0.5s ease-out;
-
-  /* Sombra para darle un toque visual */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Animación para el mensaje de error (deslizar desde arriba) */
+/* Animación para el mensaje de error */
 @keyframes slideIn {
   0% {
     transform: translateY(-50px);
@@ -73,19 +149,5 @@ button {
   100% {
     transform: translateY(0);
     opacity: 1;
-  }
-}
-
-/* Estilo para el botón "Volver al Formulario" */
-button.volver {
-  background-color: #28a745;  // Verde para el botón de volver
-  margin-top: 10px;  // Separación entre el mensaje y el botón
-  padding: 10px 20px;  // Espaciado dentro del botón
-  border-radius: 8px;  // Bordes redondeados
-  border: none;  // Sin borde
-  cursor: pointer;  // Cambiar el cursor al pasar por encima
-
-  &:hover {
-    background-color: darken(#28a745, 10%);  // Hover verde más oscuro
   }
 }

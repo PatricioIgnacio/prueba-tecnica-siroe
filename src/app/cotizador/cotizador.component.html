@@ -2,8 +2,11 @@
   <h2>Cotizador de Precio por Volumen</h2>
 
   <!-- Mensaje de error con el estilo de fondo rojo -->
-  <div *ngIf="mensajeError" class="error-message">
-    {{ mensajeError }}
+  <div *ngIf="mensajeError" class="error-container">
+    <div class="error-message">
+      {{ mensajeError }}
+    </div>
+    <button class="volver" (click)="reiniciarFormulario()">Volver al Formulario</button>
   </div>
 
   <!-- El formulario solo se muestra si no hay error -->
@@ -21,20 +24,22 @@
   </form>
 
   <!-- Resultados si el volumen está calculado y no hay mensaje de error -->
-  <div *ngIf="volumen > 0 && !mensajeError">
+  <div class="resultado-container" *ngIf="volumen > 0 && !mensajeError">
     <p>Volumen: {{ volumen }} cm³</p>
     <p>Precio: {{ precio | currency:'CLP' }}</p>
     <button (click)="procesarPedido()">Confirmar Pedido</button>
   </div>
 
-  <!-- Si el pedido ha sido creado, mostramos el resultado -->
-  <div *ngIf="pedidoCreado && !mensajeError">
-    <app-resultado [pedido]="pedido"></app-resultado>
+  <!-- Ficha del pedido ingresado -->
+  <div class="pedido-container" *ngIf="pedidoCreado && !mensajeError">
+    <h3 class="titulo-exito">Registro Ingresado con Éxito</h3>
+    <div class="ficha-pedido">
+      <p><strong>Número de Pedido:</strong> {{ pedido.id }}</p>
+      <p><strong>Volumen:</strong> {{ pedido.volumen }} cm³</p>
+      <p><strong>Precio:</strong> {{ pedido.precio | currency:'CLP' }}</p>
+      <p><strong>Fecha de Creación:</strong> {{ pedido.fecha | date:'shortDate' }}</p>
+      <p><strong>Hora de Creación:</strong> {{ pedido.fecha | date:'shortTime' }}</p>
+    </div>
+    <button (click)="reiniciarFormulario()">Realizar Otro Pedido</button>
   </div>
-
-  <!-- Botón para reiniciar el formulario en caso de error -->
-  <button *ngIf="mensajeError" class="volver" (click)="reiniciarFormulario()">Volver al Formulario</button>
-
-  <!-- Botón para reiniciar el formulario si el pedido fue creado -->
-  <button *ngIf="pedidoCreado && !mensajeError" (click)="reiniciarFormulario()">Realizar Otro Pedido</button>
 </div>
